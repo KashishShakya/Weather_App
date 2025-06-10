@@ -1,20 +1,7 @@
 <<<<<<< HEAD
 # Weather_App
 =======
-# weather_app
+<h2>Kashish Shakya</h2><br>
+<h3>240122027</h3><br>
+<p>A simple Flutter app that lets users check the current weather of any city. Users can enter a city name manually. The app displays essential weather details like city name, temperature, weather condition, humidity, and wind speed. It features smooth navigation, clean UI, and real-time data fetched from the OpenWeatherMap API.</p>
 
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
->>>>>>> fe3baca (Initial commit)
