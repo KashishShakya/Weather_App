@@ -24,7 +24,7 @@ Widget build(BuildContext context) => Scaffold(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
           children:  [
-            Container(
+            Center(child:Container(
               width: MediaQuery.sizeOf(context).width*0.9,
               child:  TextField(
               controller: controller,
@@ -38,8 +38,10 @@ Widget build(BuildContext context) => Scaffold(
               ),
              ),
             ),  
-            
-             
+            ),
+            SizedBox(
+               height: MediaQuery.sizeOf(context).height*0.08,
+              ),             
              MaterialButton(onPressed: (){ 
                 Navigator.push(context,
                 MaterialPageRoute(builder: (context) => SecondScreen(

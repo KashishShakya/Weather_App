@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:weather/weather.dart';
 import 'package:weather_app/consts.dart';
+import 'package:weather_app/first.dart';
+
 
 class SecondScreen extends StatefulWidget {
     final  String city; 
@@ -64,11 +66,37 @@ class _SecondScreenState extends State<SecondScreen>{
         fontWeight: FontWeight.w500,
         ),
         ),
-        
+        SizedBox(
+          height: MediaQuery.sizeOf(context).height*0.02,
+        ),
         _weatherIcon(),
-        
+        SizedBox(
+          height: MediaQuery.sizeOf(context).height*0.02,
+        ),
         _currentTemp(),
+        SizedBox(
+          height: MediaQuery.sizeOf(context).height*0.02,
+        ),
+        _windSpeed(),
+        SizedBox(
+          height: MediaQuery.sizeOf(context).height*0.02,
+        ),
+        _humidity(),
+        SizedBox(
+          height: MediaQuery.sizeOf(context).height*0.02,
+        ),
+        MaterialButton(onPressed: (){
+          Navigator.push(context, 
+          MaterialPageRoute(builder: (context)=> FirstScreen())
+          );
+        },  color: Colors.blue,
+           child: const Text('Go back', 
+           style: TextStyle(color: Colors.white,
+           fontSize: 15,
+           ),),
+        ),
         
+
       ],
     ),
     );
@@ -105,6 +133,29 @@ class _SecondScreenState extends State<SecondScreen>{
     );
 
   }
+
+  Widget _windSpeed(){
+    return Text("Wind Speed : ${_weather?.windSpeed?.toStringAsFixed(0)} m/s",
+    style: const TextStyle(
+      color: Colors.black,
+      fontSize: 40,
+      fontWeight: FontWeight.w500,
+    ),
+    );
+
+  }
+  
+   Widget _humidity(){
+    return Text("Humidity : ${_weather?.humidity?.toStringAsFixed(0)} %",
+    style: const TextStyle(
+      color: Colors.black,
+      fontSize: 40,
+      fontWeight: FontWeight.w500,
+    ),
+    );
+
+  }
+
 
    
 
